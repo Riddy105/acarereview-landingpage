@@ -1,0 +1,147 @@
+header {
+  padding: 2.5rem 10rem;
+  background: linear-gradient(to right, $mainBackground 20%, #00000000),
+    url("/img/header\ image.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include forSmallLaptops {
+    padding: 2.5rem 7rem;
+  }
+
+  @include forSmallTablets {
+    padding: 2.5rem 4rem;
+  }
+  @include forBigPhones {
+    padding: 2.5rem;
+    background-size: cover;
+    background-position: center;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14rem;
+    position: relative;
+    @include forBigPhones {
+      margin-bottom: 8rem;
+    }
+    &__logo {
+      font-size: 3rem;
+      font-weight: 700;
+      @include darkBrownVariation(0.85);
+    }
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      @include forSmallTablets {
+        gap: 1.5rem;
+      }
+      @include forBigPhones {
+        position: absolute;
+        background-color: $mainBackground;
+        top: 100%;
+        left: 20%;
+        height: 80vh;
+        width: 80vw;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+        // opacity: 0;
+        pointer-events: none;
+        // visibility: hidden;
+        transform: translateX(100%);
+        transition: all 1s;
+      }
+      li {
+        color: $gold;
+        &:hover {
+          padding-bottom: 0.2rem;
+          border-bottom: 1px solid $gold;
+        }
+      }
+      li:first-child {
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid $gold;
+      }
+    }
+    &__signup {
+      background-color: $buttonYellow;
+      @include darkBrownVariation(0.9);
+      padding: 1.2rem 2rem;
+      font-size: 1.8rem;
+    }
+    .mobile-nav-btn {
+      display: none;
+
+      @include forBigPhones {
+        display: block;
+        background: none;
+        border: none;
+        .menu-outline,
+        .close-outline {
+          font-size: 3rem;
+          color: black;
+        }
+      }
+    }
+    .close-outline {
+      display: none;
+    }
+  }
+  .nav-open {
+    .nav-bar__links {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+    }
+    .close-outline {
+      display: block;
+    }
+    .menu-outline {
+      display: none;
+    }
+  }
+
+  .hero-section {
+    width: 50%;
+    @include forSmallLaptops {
+      width: 65%;
+    }
+    @include forTablets {
+      width: 100%;
+    }
+    &__header {
+      font-size: 7rem;
+      margin-bottom: 2.8rem;
+      @include forBigPhones {
+        font-size: 6rem;
+        line-height: 7rem;
+      }
+    }
+    &__education {
+      color: rgba(222, 97, 1, 1);
+    }
+    &__legacy {
+      color: $gold;
+    }
+    &__para {
+      font-size: 2.3rem;
+      @include darkBrownVariation(0.7);
+      margin-bottom: 5rem;
+    }
+    &__img {
+      margin-left: 4rem;
+      @include forTablets {
+        margin-left: 0;
+      }
+      img {
+        width: 259px;
+        height: 72px;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+* {
+  @include reset();
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}

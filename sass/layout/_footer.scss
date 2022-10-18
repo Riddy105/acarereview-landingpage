@@ -1,0 +1,60 @@
+footer {
+  background-color: $footerBackground;
+  color: $mainBackground;
+  padding: 5rem 10rem 0;
+  @include forTablets {
+    padding: 5rem 5rem 0;
+  }
+  @include forBigPhones {
+    padding: 5rem 2rem 0;
+  }
+  .footer__maincomponent {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    padding-bottom: 7rem;
+    border-bottom: 1px solid rgba(255, 251, 240, 0.5);
+    @include forSmallTablets {
+      grid-template-columns: 2.5fr 1fr 1fr;
+      column-gap: 3rem;
+      row-gap: 3rem;
+    }
+    @include forBigPhones {
+      grid-template-columns: 1fr 1fr;
+    }
+    .maincomponent__contact {
+      h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+      }
+      ul {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+    .maincomponent__aboutus {
+      justify-self: end;
+      @include forSmallTablets {
+        justify-self: start;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        li {
+          font-weight: 700;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  small {
+    display: block;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "helveticaneue";
+  src: url(/helveticaneue/HelveticaNeueBd.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "helveticaneue";
+  src: url(/helveticaneue/HelveticaNeueMed.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "helveticaneue";
+  src: url(/helveticaneue/HelveticaNeueIt.ttf) format("truetype");
+  font-style: italic;
+}
+
+html {
+  font-size: $defaultFontSize;
+  overflow-x: hidden;
+}
+body {
+  font-size: $bodyFontSize;
+  font-family: "helveticaneue", sans-serif;
+  font-weight: $RegularFontWeight;
+}

@@ -1,0 +1,28 @@
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@mixin darkBrownVariation($alphaValue) {
+  color: rgba(51, 39, 0, $alphaValue);
+}
+@mixin forSmallLaptops {
+  @media (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin forTablets {
+  @media (max-width: 855px) {
+    @content;
+  }
+}
+@mixin forSmallTablets {
+  @media (max-width: 750px) {
+    @content;
+  }
+}
+@mixin forBigPhones {
+  @media (max-width: 600px) {
+    @content;
+  }
+}

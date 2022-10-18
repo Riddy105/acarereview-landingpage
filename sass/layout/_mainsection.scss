@@ -1,0 +1,503 @@
+main {
+  background-color: $mainBackground;
+}
+.section--review {
+  padding: 6rem 0 2rem;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include forSmallLaptops {
+    width: 85%;
+  }
+  @include forTablets {
+    width: 90%;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 700;
+    @include darkBrownVariation(0.9);
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  &__para {
+    font-size: 2rem;
+    text-align: center;
+    @include darkBrownVariation(0.7);
+
+    margin-bottom: 3rem;
+  }
+  &__search-component {
+    background-color: rgba(196, 196, 196, 0.6);
+    padding: 1.5rem;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-bottom: 5.5rem;
+    @include forSmallTablets {
+      width: 80%;
+    }
+    @include forBigPhones {
+      width: 100%;
+    }
+    .category {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 2.5rem;
+      background-color: $mainBackground;
+      border-right: 0.5px solid rgba(51, 39, 0, 0.15);
+      border-radius: 1rem 0 0 1rem;
+      @include darkBrownVariation(0.7);
+      @include forBigPhones {
+        padding: 1.2rem 1rem;
+      }
+    }
+    input {
+      border: none;
+      background-color: $mainBackground;
+      width: 100%;
+      padding-left: 4rem;
+      @include forBigPhones {
+        padding: 0.5rem;
+        width: 70%;
+      }
+    }
+    button {
+      background-color: rgba(120, 129, 128, 0.75);
+      width: 25%;
+      border-radius: 0 1rem 1rem 0;
+    }
+  }
+  &__schools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    align-items: stretch;
+    margin-bottom: 3rem;
+    @include forSmallTablets {
+      grid-template-columns: 1fr;
+      width: 70%;
+      row-gap: 5rem;
+    }
+    @include forBigPhones {
+      width: 100%;
+    }
+  }
+  &__school {
+    .school__image {
+      display: block;
+      @include forSmallLaptops {
+        width: 100%;
+      }
+    }
+    .school__text-box {
+      padding: 2rem 2.5rem 3rem;
+      border-radius: 0 0 2rem 2rem;
+      @include forTablets {
+        padding: 1.5rem;
+      }
+      &__header {
+        font-size: 1.8rem;
+        margin-bottom: 0.6rem;
+      }
+      &__para {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+      .stars {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        p {
+          margin-left: 1rem;
+          font-size: 0.7rem;
+        }
+      }
+      .icons {
+        display: flex;
+        gap: 3rem;
+      }
+    }
+
+    .school__text-box--futa {
+      background-color: rgba(255, 208, 84, 0.85);
+      @include darkBrownVariation(0.8);
+    }
+    .school__text-box--ui {
+      background-color: rgba(14, 2, 92, 0.75);
+      color: rgba(255, 251, 240, 0.8);
+    }
+    .school__text-box--funaab {
+      background-color: rgba(12, 112, 3, 0.75);
+      color: rgba(255, 251, 240, 0.8);
+    }
+  }
+  &__btns {
+    display: flex;
+    gap: 2rem;
+    button {
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid #ffc107;
+      border-radius: 50%;
+      &:nth-child(2) {
+        background-color: #ffc107;
+      }
+      @include forSmallTablets {
+        display: none;
+      }
+    }
+  }
+}
+.section--services {
+  background-color: rgba(247, 242, 229, 0.6);
+  padding: 3rem;
+  .services {
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    @include forSmallLaptops {
+      width: 85%;
+    }
+    @include forTablets {
+      width: 70%;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @include forBigPhones {
+      width: 100%;
+    }
+    &__img {
+      background-image: url("/img/Frame\ 91.png");
+      background-repeat: no-repeat;
+      img {
+        @include forSmallLaptops {
+          width: 450px;
+        }
+        @include forBigPhones {
+          width: 400px;
+          transform: translateX(10%);
+        }
+      }
+    }
+    &__text {
+      @include forTablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    // .ellipse--blue {
+    //   position: absolute;
+    //   top: 5%;
+    //   left: -15%;
+    // }
+    // .ellipse--small {
+    //   position: absolute;
+    //   bottom: -5%;
+    //   left: 32%;
+    // }
+    // .ellipse--lime {
+    //   position: absolute;
+    //   bottom: -5%;
+    //   left: -5%;
+    // }
+    &__text {
+      h2 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        @include darkBrownVariation(0.9);
+        margin-bottom: 3rem;
+      }
+      p {
+        font-size: 1.6rem;
+        color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 4rem;
+      }
+      a {
+        background-color: $buttonYellow;
+        font-size: 3rem;
+        padding: 1.5rem 3.2rem;
+        border-radius: 1.5rem;
+      }
+    }
+  }
+}
+.section--platform {
+  padding: 3rem 0 0;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 10rem;
+  @include forTablets {
+    width: 70%;
+    flex-direction: column;
+    gap: 0;
+  }
+  @include forBigPhones {
+    width: 90%;
+  }
+  .platform__img {
+    background-image: url("/img/Frame\ 92.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    img:nth-child(1) {
+      transform: translate(3%, -24%);
+      @include forSmallLaptops {
+        width: 400px;
+      }
+    }
+    // .ellipse--yellow {
+    //   position: absolute;
+    //   bottom: 10%;
+    //   right: -10%;
+    // }
+    // .ellipse--blue {
+    //   position: absolute;
+    //   top: 8%;
+    //   right: 0;
+    // }
+    // .ellipse--small {
+    //   position: absolute;
+    //   bottom: 30%;
+    //   right: 40%;
+    // }
+    // .ellipse--blur {
+    //   position: absolute;
+    //   top: 12%;
+    //   right: 40%;
+    // }
+  }
+  .platform__text {
+    @include forTablets {
+      margin-top: -8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    h2 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      @include darkBrownVariation(0.9);
+      margin-bottom: 3rem;
+    }
+    p {
+      font-size: 1.6rem;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 4rem;
+    }
+    a {
+      background-color: $buttonYellow;
+      font-size: 3rem;
+      padding: 1.5rem 3.2rem;
+      border-radius: 1.5rem;
+    }
+  }
+}
+.section--aspect {
+  width: 75%;
+  margin: 0 auto 8rem;
+  @include forSmallLaptops {
+    width: 80%;
+  }
+  @include forTablets {
+    width: 90%;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      @include darkBrownVariation(0.9);
+      @include forBigPhones {
+        font-size: 2rem;
+      }
+    }
+  }
+  &__arrows {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    @include forBigPhones {
+      img:last-child {
+        width: 4rem;
+      }
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+    @include forSmallTablets {
+      grid-template-columns: 1fr;
+      width: 50%;
+      margin: 0 auto;
+      row-gap: 4rem;
+    }
+    @include forBigPhones {
+      width: 90%;
+    }
+    .card {
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      border-radius: 2rem;
+      @include forTablets {
+        padding: 1rem;
+      }
+      @include forSmallTablets {
+        padding: 4rem;
+      }
+      .card__title {
+        font-size: 2rem;
+        text-align: center;
+      }
+      p:nth-of-type(2) {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+    .card--1,
+    .card--3 {
+      background-color: rgba(254, 227, 207, 0.5);
+      color: rgba(71, 60, 24, 0.85);
+      box-shadow: 4px 4px 10px 0px rgba(255, 239, 223, 1);
+    }
+    .card--2 {
+      background-color: rgba(79, 146, 182, 0.95);
+      box-shadow: 4px 4px 20px 0px rgba(79, 146, 182, 0.7);
+      transform: scale(1.1);
+      color: rgba(238, 230, 220, 1);
+    }
+  }
+}
+.section--motivation {
+  background-color: rgba(163, 142, 129, 0.1);
+  padding: 8rem 10rem;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  @include forSmallLaptops {
+    padding: 8rem 8rem;
+    gap: 6rem;
+  }
+  @include forSmallLaptops {
+    padding: 8rem 3rem;
+    gap: 3rem;
+  }
+  @include forBigPhones {
+    flex-direction: column;
+  }
+  img {
+    @include forSmallLaptops {
+      width: 450px;
+    }
+    @include forTablets {
+      width: 350px;
+    }
+    @include forSmallTablets {
+      width: 250px;
+    }
+    @include forBigPhones {
+      width: 300px;
+    }
+  }
+  &__para {
+    @include darkBrownVariation(0.9);
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-style: italic;
+    @include forSmallTablets {
+      font-size: 2.2rem;
+    }
+    .quotes {
+      font-size: 7rem;
+      display: block;
+      margin-bottom: -4rem;
+      &__forward {
+        transform: translateX(-7%);
+      }
+      &__backward {
+        transform: translate(40%, -20%);
+        @include forTablets {
+          transform: translate(90%, -20%);
+        }
+      }
+    }
+  }
+  &__author {
+    @include darkBrownVariation(0.95);
+    font-weight: 700;
+    font-size: 3.4rem;
+  }
+}
+.section--data {
+  padding: 7rem 10rem;
+  @include forTablets {
+    padding: 7rem 5rem;
+  }
+  @include forBigPhones {
+    padding: 7rem 2rem;
+  }
+  .data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    @include forSmallTablets {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 4rem;
+    }
+  }
+  p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    @include darkBrownVariation(0.85);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include darkBrownVariation(0.75);
+  }
+  &__reviews li,
+  &__reviews p {
+    text-align: end;
+    @include forSmallTablets {
+      text-align: start;
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    button {
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid #ffc107;
+      border-radius: 50%;
+      &:nth-child(2) {
+        background-color: #ffc107;
+      }
+    }
+  }
+}
