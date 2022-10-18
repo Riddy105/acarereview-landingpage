@@ -87,7 +87,9 @@ header {
           flex-direction: column;
           justify-content: center;
           gap: 4rem;
+          opacity: 0;
           pointer-events: none;
+          visibility: hidden;
           transform: translateX(100%);
           transition: all 1s; } }
       header .nav-bar__links li {
